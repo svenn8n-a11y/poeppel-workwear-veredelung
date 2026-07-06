@@ -137,7 +137,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .crumb .cur{color:#cdd7e2}
 
 /* Hero */
-.hero{background:linear-gradient(90deg,var(--dark-bg) 0%,rgba(10,22,40,.92) 30%,rgba(10,22,40,.55) 56%,rgba(10,22,40,.12) 80%,rgba(10,22,40,0) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-firmenlogo.webp") right top/cover no-repeat,var(--navy);color:#fff;padding:76px 0 88px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(90deg,var(--dark-bg) 0%,rgba(10,22,40,.92) 30%,rgba(10,22,40,.55) 56%,rgba(10,22,40,.12) 80%,rgba(10,22,40,0) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-firmenlogo.webp") right top/cover no-repeat,var(--navy);background-attachment:scroll,fixed;color:#fff;padding:76px 0 88px;position:relative;overflow:hidden}
 @media(max-width:860px){.hero{background:linear-gradient(180deg,rgba(7,15,28,.82) 0%,rgba(10,22,40,.5) 46%,rgba(10,22,40,.18) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-mobile.webp") center bottom/cover no-repeat,var(--navy)}}
 .hero .trust-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:7px 15px;border-radius:999px;font-size:13px;color:#cdd7e2;margin-bottom:22px}
 .hero .trust-pill svg{width:15px;height:15px;fill:var(--orange)}
@@ -292,6 +292,13 @@ dl.spec dd.tbd{color:#a06a1f}
 
 /* CTA / form */
 .cta{background:radial-gradient(900px 400px at 20% 0%,#16294a,var(--navy) 60%,var(--dark-bg));color:#fff}
+.allout{background:var(--orange);color:#fff;text-align:center}
+.allout .eyebrow{color:#fff;opacity:.9}
+.allout h2{color:#fff;margin-bottom:16px}
+.allout p{max-width:760px;margin:0 auto 28px;font-size:clamp(16px,1.7vw,20px);color:rgba(255,255,255,.96)}
+.allout p strong{color:#fff}
+.allout .btn-white{background:#fff;color:var(--orange)}
+.allout .btn-white:hover{background:var(--navy);color:#fff}
 .cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
 @media(max-width:820px){.cta-wrap{grid-template-columns:1fr;gap:28px}}
 .cta h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
@@ -691,22 +698,13 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="section" id="faq">
+<!-- ============ CTA ALLES AUS EINER HAND ============ -->
+<section class="section allout">
   <div class="container">
-    <div class="center">
-      <span class="eyebrow">Häufige Fragen</span>
-      <h2 class="h2">Häufige Fragen zur Veredelung von Arbeitskleidung</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item"><button class="faq-q">Welche Veredelungsart hält am längsten auf Arbeitskleidung?<span class="pl">+</span></button><div class="faq-a"><p>Für Arbeitskleidung mit häufiger Industriewäsche ist die Bestickung am haltbarsten: Das Logo wird direkt ins Gewebe gestickt und übersteht in der Regel die gesamte Lebensdauer des Kleidungsstücks. Welche Technik im Einzelfall am besten passt, hängt von Material und Waschtemperatur ab – wir beraten Sie dazu.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Kann man Warnschutzkleidung veredeln, ohne die Schutzwirkung zu verlieren?<span class="pl">+</span></button><div class="faq-a"><p>Warn- und Multinorm-Kleidung darf nur mit dafür geeigneten Verfahren und in zulässigen Flächen veredelt werden, damit die Normkonformität erhalten bleibt. Wir klären die zertifizierungsrelevanten Anforderungen individuell in der Beratung und stimmen uns mit dem Hersteller ab.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Welche Dateiformate braucht man, um ein Logo drucken oder sticken zu lassen?<span class="pl">+</span></button><div class="faq-a"><p>Am besten eine Vektordatei (AI, EPS, PDF oder SVG). Damit lässt sich das Logo verlustfrei skalieren und in Stick- oder Druckdaten umsetzen. Liegt keine Vektordatei vor, digitalisieren wir Ihr Logo für Sie.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Ab welcher Stückzahl lohnt sich veredelte Arbeitskleidung?<span class="pl">+</span></button><div class="faq-a"><p>Es gibt keine hohe Mindestmenge: Moderne Druck- und Stickverfahren sind auch bei kleinen Auflagen wirtschaftlich. Das Logo wird einmalig eingerichtet; danach ist auch die Nachbestellung einzelner Teile möglich.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Wie sehen nachbestellte Teile genauso aus wie die erste Lieferung?<span class="pl">+</span></button><div class="faq-a"><p>Indem Logo, Platzierung und Technik zentral hinterlegt sind. Bei Pöppel Workwear Management sind diese Vorgaben im System gespeichert, sodass jede Nachbestellung – auch Jahre später – einheitlich ausfällt.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Bestickung oder Druck – was ist besser?<span class="pl">+</span></button><div class="faq-a"><p>Bestickung wirkt hochwertig und ist sehr haltbar, eignet sich aber weniger für feine Details und Farbverläufe. Digitaldruck bildet mehrfarbige und fotorealistische Motive besser ab. Welche Technik passt, hängt von Motiv, Material und Einsatz ab – wir beraten Sie materialgerecht.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Was kostet die Veredelung von Firmenkleidung?<span class="pl">+</span></button><div class="faq-a"><p>Jeder Kunde erhält individuelle Konditionen – der Preis richtet sich nach Technik, Logogröße, Farbanzahl und Stückzahl. Auf Basis Ihrer Kollektion erstellen wir Ihnen ein passendes Angebot.</p></div></div>
-    </div>
+    <span class="eyebrow">Workwear-Management</span>
+    <h2 class="h2">Alles aus einer Hand.</h2>
+    <p>Veredelung ist nur ein Baustein. Ihr komplettes Workwear-Management aus einer Hand – der Dreiklang aus <strong>Kostenstellen-Transparenz</strong>, <strong>Vorkommissionierung</strong> und <strong>Multi-Standort</strong>. Diesen Dreiklang bildet kein Wettbewerber ab.</p>
+    <a href="https://www.poeppel-wkz.de/" class="btn btn-white">Zum Workwear-Management →</a>
   </div>
 </section>
 
@@ -745,6 +743,25 @@ footer a:hover{color:#fff}
         <p class="consent">Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage. Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
         <button type="submit" class="btn btn-primary">Beratung anfragen</button>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Häufige Fragen</span>
+      <h2 class="h2">Häufige Fragen zur Veredelung von Arbeitskleidung</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Welche Veredelungsart hält am längsten auf Arbeitskleidung?<span class="pl">+</span></button><div class="faq-a"><p>Für Arbeitskleidung mit häufiger Industriewäsche ist die Bestickung am haltbarsten: Das Logo wird direkt ins Gewebe gestickt und übersteht in der Regel die gesamte Lebensdauer des Kleidungsstücks. Welche Technik im Einzelfall am besten passt, hängt von Material und Waschtemperatur ab – wir beraten Sie dazu.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Kann man Warnschutzkleidung veredeln, ohne die Schutzwirkung zu verlieren?<span class="pl">+</span></button><div class="faq-a"><p>Warn- und Multinorm-Kleidung darf nur mit dafür geeigneten Verfahren und in zulässigen Flächen veredelt werden, damit die Normkonformität erhalten bleibt. Wir klären die zertifizierungsrelevanten Anforderungen individuell in der Beratung und stimmen uns mit dem Hersteller ab.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Welche Dateiformate braucht man, um ein Logo drucken oder sticken zu lassen?<span class="pl">+</span></button><div class="faq-a"><p>Am besten eine Vektordatei (AI, EPS, PDF oder SVG). Damit lässt sich das Logo verlustfrei skalieren und in Stick- oder Druckdaten umsetzen. Liegt keine Vektordatei vor, digitalisieren wir Ihr Logo für Sie.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Ab welcher Stückzahl lohnt sich veredelte Arbeitskleidung?<span class="pl">+</span></button><div class="faq-a"><p>Es gibt keine hohe Mindestmenge: Moderne Druck- und Stickverfahren sind auch bei kleinen Auflagen wirtschaftlich. Das Logo wird einmalig eingerichtet; danach ist auch die Nachbestellung einzelner Teile möglich.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Wie sehen nachbestellte Teile genauso aus wie die erste Lieferung?<span class="pl">+</span></button><div class="faq-a"><p>Indem Logo, Platzierung und Technik zentral hinterlegt sind. Bei Pöppel Workwear Management sind diese Vorgaben im System gespeichert, sodass jede Nachbestellung – auch Jahre später – einheitlich ausfällt.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Bestickung oder Druck – was ist besser?<span class="pl">+</span></button><div class="faq-a"><p>Bestickung wirkt hochwertig und ist sehr haltbar, eignet sich aber weniger für feine Details und Farbverläufe. Digitaldruck bildet mehrfarbige und fotorealistische Motive besser ab. Welche Technik passt, hängt von Motiv, Material und Einsatz ab – wir beraten Sie materialgerecht.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Was kostet die Veredelung von Firmenkleidung?<span class="pl">+</span></button><div class="faq-a"><p>Jeder Kunde erhält individuelle Konditionen – der Preis richtet sich nach Technik, Logogröße, Farbanzahl und Stückzahl. Auf Basis Ihrer Kollektion erstellen wir Ihnen ein passendes Angebot.</p></div></div>
     </div>
   </div>
 </section>
