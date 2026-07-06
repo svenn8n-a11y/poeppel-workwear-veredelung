@@ -166,6 +166,12 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .proof{background:#fff}
 .proof-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center;margin-top:8px}
 .proof-chip{background:var(--pastel);border-radius:10px;padding:14px 20px;color:var(--navy);font-family:var(--head);font-size:15px}
+.testimonial{max-width:840px;margin:32px auto 0;background:var(--pastel);border:1px solid #cfe0ec;border-radius:20px;padding:clamp(30px,4vw,52px);position:relative}
+.testimonial .tq-mark{font-family:var(--head);font-size:72px;line-height:.5;color:var(--orange);margin-bottom:14px}
+.testimonial blockquote{font-size:clamp(17px,1.9vw,22px);line-height:1.6;color:var(--navy)}
+.testimonial figcaption{margin-top:24px;display:flex;flex-direction:column;gap:3px}
+.testimonial .tq-name{font-family:var(--head);font-size:17px;color:var(--navy)}
+.testimonial .tq-role{font-size:14px;color:var(--muted)}
 
 /* Recommendation cards */
 .reco-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
@@ -455,20 +461,18 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ============ SOCIAL PROOF (PLATZHALTER) ============ -->
+<!-- ============ KUNDENSTIMME ============ -->
 <section class="section proof" style="padding-top:56px;padding-bottom:56px">
-  <div class="container center">
-    <span class="eyebrow">Vertrauen</span>
-    <div class="ph" style="text-align:left;max-width:760px;margin:0 auto 22px">
-      <b>PLATZHALTER – Social Proof.</b> Kundenlogos, Branchen und eine kurze Referenz liefert Sven nach. Empfehlung: 4–6 anonymisierbare Branchen-Chips + 1 Case-Snippet („Firma X: 40 Mitarbeiter eingekleidet, Nachbestellung in wenigen Klicks“).
-    </div>
-    <div class="proof-row">
-      <span class="proof-chip">Handwerk</span>
-      <span class="proof-chip">Industrie</span>
-      <span class="proof-chip">Logistik</span>
-      <span class="proof-chip">Bau</span>
-      <span class="proof-chip">Handel</span>
-    </div>
+  <div class="container">
+    <div class="center"><span class="eyebrow">Kundenstimme</span></div>
+    <figure class="testimonial">
+      <div class="tq-mark">“</div>
+      <blockquote>Die Firma Pöppel begleitet uns seit über fünf Jahrzehnten als zuverlässiger Partner. Besonders der Bereich Arbeitskleidung bietet uns echten Mehrwert: Dank des modernen Shopsystems bestellen wir unkompliziert und zeitsparend – die Kleidung wird individuell für jeden Mitarbeitenden verpackt geliefert. Das reduziert unseren internen Aufwand erheblich. Auch die große Auswahl und die fairen Preise kommen bei unserem Team sehr gut an.</blockquote>
+      <figcaption>
+        <span class="tq-name">Marion Strasser</span>
+        <span class="tq-role">Personalorganisation / Marketing · Lämmle Holzverarbeitung GmbH, Rot a. d. Rot</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
