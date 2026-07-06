@@ -166,12 +166,14 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .proof{background:#fff}
 .proof-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center;margin-top:8px}
 .proof-chip{background:var(--pastel);border-radius:10px;padding:14px 20px;color:var(--navy);font-family:var(--head);font-size:15px}
-.testimonial{max-width:840px;margin:32px auto 0;background:var(--pastel);border:1px solid #cfe0ec;border-radius:20px;padding:clamp(30px,4vw,52px);position:relative}
-.testimonial .tq-mark{font-family:var(--head);font-size:72px;line-height:.5;color:var(--orange);margin-bottom:14px}
-.testimonial blockquote{font-size:clamp(17px,1.9vw,22px);line-height:1.6;color:var(--navy)}
-.testimonial figcaption{margin-top:24px;display:flex;flex-direction:column;gap:3px}
-.testimonial .tq-name{font-family:var(--head);font-size:17px;color:var(--navy)}
-.testimonial .tq-role{font-size:14px;color:var(--muted)}
+.qmark{font-family:var(--head);font-size:66px;line-height:.4;color:var(--orange);margin:10px 0 4px}
+.quote{max-width:860px;margin:0 auto;font-size:clamp(19px,2.1vw,26px);line-height:1.55;color:var(--navy)}
+.quote-author{display:inline-flex;align-items:center;gap:22px;margin-top:34px;flex-wrap:wrap;justify-content:center;text-align:left}
+.quote-author .qa-logo{height:50px;width:auto}
+.quote-author .qa-sep{width:1px;height:46px;background:var(--line)}
+.quote-author .qa-name{font-family:var(--head);font-size:17px;color:var(--navy);display:block}
+.quote-author .qa-role{font-size:14px;color:var(--muted)}
+@media(max-width:560px){.quote-author .qa-sep{display:none}}
 
 /* Recommendation cards */
 .reco-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
@@ -462,17 +464,20 @@ footer a:hover{color:#fff}
 </section>
 
 <!-- ============ KUNDENSTIMME ============ -->
-<section class="section proof" style="padding-top:56px;padding-bottom:56px">
-  <div class="container">
-    <div class="center"><span class="eyebrow">Kundenstimme</span></div>
-    <figure class="testimonial">
-      <div class="tq-mark">“</div>
-      <blockquote>Die Firma Pöppel begleitet uns seit über fünf Jahrzehnten als zuverlässiger Partner. Besonders der Bereich Arbeitskleidung bietet uns echten Mehrwert: Dank des modernen Shopsystems bestellen wir unkompliziert und zeitsparend – die Kleidung wird individuell für jeden Mitarbeitenden verpackt geliefert. Das reduziert unseren internen Aufwand erheblich. Auch die große Auswahl und die fairen Preise kommen bei unserem Team sehr gut an.</blockquote>
-      <figcaption>
-        <span class="tq-name">Marion Strasser</span>
-        <span class="tq-role">Personalorganisation / Marketing · Lämmle Holzverarbeitung GmbH, Rot a. d. Rot</span>
-      </figcaption>
-    </figure>
+<section class="section">
+  <div class="container center">
+    <span class="eyebrow">Kundenstimme</span>
+    <h2 class="h2">Was unsere Kunden sagen</h2>
+    <div class="qmark">“</div>
+    <blockquote class="quote">Die Firma Pöppel begleitet uns seit über fünf Jahrzehnten als zuverlässiger Partner. Besonders der Bereich Arbeitskleidung bietet uns echten Mehrwert: Dank des modernen Shopsystems bestellen wir unkompliziert und zeitsparend – die Kleidung wird individuell für jeden Mitarbeitenden verpackt geliefert. Das reduziert unseren internen Aufwand erheblich. Auch die große Auswahl und die fairen Preise kommen bei unserem Team sehr gut an.</blockquote>
+    <div class="quote-author">
+      <img class="qa-logo" src="assets/img/laemmle-logo.svg" alt="Lämmle Holzverarbeitung GmbH" width="590" height="85">
+      <span class="qa-sep"></span>
+      <div>
+        <span class="qa-name">Marion Strasser</span>
+        <span class="qa-role">Personalorganisation / Marketing · Lämmle Holzverarbeitung GmbH, Rot a. d. Rot</span>
+      </div>
+    </div>
   </div>
 </section>
 
