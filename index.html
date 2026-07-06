@@ -137,8 +137,9 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .crumb .cur{color:#cdd7e2}
 
 /* Hero */
-.hero{background:linear-gradient(90deg,var(--dark-bg) 0%,rgba(10,22,40,.92) 30%,rgba(10,22,40,.55) 56%,rgba(10,22,40,.12) 80%,rgba(10,22,40,0) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-firmenlogo.webp") right top/cover no-repeat,var(--navy);background-attachment:scroll,fixed;color:#fff;padding:76px 0 88px;position:relative;overflow:hidden}
-@media(max-width:860px){.hero{background:linear-gradient(180deg,rgba(7,15,28,.82) 0%,rgba(10,22,40,.5) 46%,rgba(10,22,40,.18) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-mobile.webp") center bottom/cover no-repeat,var(--navy)}}
+.hero{background:linear-gradient(90deg,var(--dark-bg) 0%,rgba(10,22,40,.92) 30%,rgba(10,22,40,.55) 56%,rgba(10,22,40,.12) 80%,rgba(10,22,40,0) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-firmenlogo.webp") right top/cover no-repeat,var(--navy);background-attachment:scroll,fixed;animation:heroDrift 30s ease-in-out infinite alternate;color:#fff;padding:76px 0 88px;position:relative;overflow:hidden}
+@keyframes heroDrift{from{background-position:0% 0%,right top}to{background-position:0% 0%,right 16%}}
+@media(max-width:860px){.hero{background:linear-gradient(180deg,rgba(7,15,28,.82) 0%,rgba(10,22,40,.5) 46%,rgba(10,22,40,.18) 100%),url("assets/img/veredelung/arbeitskleidung-veredeln-softshelljacke-mobile.webp") center bottom/cover no-repeat,var(--navy);animation:none}}
 .hero .trust-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:7px 15px;border-radius:999px;font-size:13px;color:#cdd7e2;margin-bottom:22px}
 .hero .trust-pill svg{width:15px;height:15px;fill:var(--orange)}
 .hero h1{font-size:clamp(34px,6vw,60px);max-width:14ch}
@@ -150,7 +151,8 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 /* USP band */
 .usp{background:var(--pastel)}
 .usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.usp-card{background:#fff;border-radius:var(--r);padding:28px 26px;border:1px solid #cfe0ec}
+.usp-card{background:#fff;border-radius:var(--r);padding:28px 26px;border:1px solid #cfe0ec;box-shadow:0 10px 30px rgba(10,22,40,.07);transition:transform .25s,box-shadow .25s,border-color .25s}
+.usp-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 16px 46px rgba(255,102,0,.3)}
 .usp-card{text-align:center}
 .usp-ic{width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
 .usp-ic svg{width:56px;height:56px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -178,14 +180,14 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 /* Recommendation cards */
 .reco-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
 .reco-chip{display:inline-flex;align-items:center;font-family:var(--head);font-size:14px;color:var(--navy);background:var(--pastel);border:1px solid #cfe0ec;padding:9px 17px;border-radius:999px;transition:.2s}
-.reco-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.reco-chip:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
 .tech .usecase{font-family:var(--head);font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
 .tech.wide{grid-column:1/-1}
 .tech .partner{display:inline-block;font-family:var(--head);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--orange);background:rgba(255,102,0,.14);padding:3px 10px;border-radius:999px;margin-left:auto}
 
 /* Technique cards */
 .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
-.tech{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.tech{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 18px 44px rgba(10,22,40,.12)}
 .tech-illu{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center;display:block;background:var(--navy)}
 .tech.wide .tech-illu{aspect-ratio:24/7}
 .tech-head{background:var(--navy);color:#fff;padding:22px 24px;display:flex;align-items:center;gap:14px}
@@ -297,6 +299,8 @@ dl.spec dd.tbd{color:#a06a1f}
 .allout h2{color:#fff;margin-bottom:16px}
 .allout p{max-width:760px;margin:0 auto 28px;font-size:clamp(16px,1.7vw,20px);color:rgba(255,255,255,.96)}
 .allout p strong{color:#fff}
+.allout .dreiklang{font-family:var(--head);font-size:clamp(24px,3.4vw,38px);color:#fff;line-height:1.12;margin:2px 0 14px}
+.allout .dreiklang span{font-family:var(--body);font-weight:600;font-size:.5em;opacity:.92;white-space:nowrap}
 .allout .btn-white{background:#fff;color:var(--orange)}
 .allout .btn-white:hover{background:var(--navy);color:#fff}
 .cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -703,7 +707,8 @@ footer a:hover{color:#fff}
   <div class="container">
     <span class="eyebrow">Workwear-Management</span>
     <h2 class="h2">Alles aus einer Hand.</h2>
-    <p>Veredelung ist nur ein Baustein. Ihr komplettes Workwear-Management aus einer Hand – der Dreiklang aus <strong>Kostenstellen-Transparenz</strong>, <strong>Vorkommissionierung</strong> und <strong>Multi-Standort</strong>. Diesen Dreiklang bildet kein Wettbewerber ab.</p>
+    <p class="dreiklang">Einkleiden. Verwalten. Sparen. <span>— mit Pöppel Workwear.</span></p>
+    <p>Veredelung ist nur ein Baustein Ihres Workwear-Managements: vom Kernsortiment über die Veredelung bis zur einfachen Nachbestellung – alles aus einer Hand.</p>
     <a href="https://www.poeppel-wkz.de/" class="btn btn-white">Zum Workwear-Management →</a>
   </div>
 </section>
