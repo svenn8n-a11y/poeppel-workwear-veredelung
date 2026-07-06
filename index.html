@@ -167,11 +167,10 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .proof-chip{background:var(--pastel);border-radius:10px;padding:14px 20px;color:var(--navy);font-family:var(--head);font-size:15px}
 
 /* Recommendation cards */
-.reco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:16px}
-.reco{background:var(--navy);color:#fff;border-radius:var(--r);padding:22px 20px;border:1px solid var(--navy-2);text-align:center;display:flex;flex-direction:column;align-items:center}
-.reco .tag{font-size:13px;color:#cdd7e2;font-weight:600;line-height:1.35;min-height:2.7em;display:flex;align-items:flex-end;justify-content:center;margin-bottom:10px}
-.reco b{font-family:var(--head);font-size:18px;color:#fff;display:block}
-.reco .arw{color:var(--orange);font-family:var(--head);margin-top:10px;display:inline-block;font-size:14px}
+.reco-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.reco-chip{display:inline-flex;align-items:center;font-family:var(--head);font-size:14px;color:var(--navy);background:var(--pastel);border:1px solid #cfe0ec;padding:9px 17px;border-radius:999px;transition:.2s}
+.reco-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tech .usecase{font-family:var(--head);font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
 .tech.wide{grid-column:1/-1}
 .tech .partner{display:inline-block;font-family:var(--head);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--orange);background:rgba(255,102,0,.14);padding:3px 10px;border-radius:999px;margin-left:auto}
 
@@ -462,12 +461,12 @@ footer a:hover{color:#fff}
     </div>
 
     <!-- Empfehlungslogik -->
-    <div class="reco-grid" style="margin-top:26px">
-      <div class="reco"><div class="tag">Industriewäsche &amp; Dauerbelastung</div><b>Bestickung</b><a class="arw" href="#t-stick">→ Details</a></div>
-      <div class="reco"><div class="tag">Mehrfarbig &amp; Farbverläufe</div><b>Digitaldruck</b><a class="arw" href="#t-druck">→ Details</a></div>
-      <div class="reco"><div class="tag">Auffällig &amp; samtig-erhaben</div><b>Flock</b><a class="arw" href="#t-flock">→ Details</a></div>
-      <div class="reco"><div class="tag">Sichtbarkeit &amp; Warnschutz</div><b>Reflex</b><a class="arw" href="#t-reflex">→ Details</a></div>
-      <div class="reco"><div class="tag">Hohe Auflagen (Partner)</div><b>Siebdruck</b><a class="arw" href="#t-sieb">→ Details</a></div>
+    <div class="reco-nav">
+      <a class="reco-chip" href="#t-stick">Bestickung</a>
+      <a class="reco-chip" href="#t-druck">Digitaldruck</a>
+      <a class="reco-chip" href="#t-flock">Flock</a>
+      <a class="reco-chip" href="#t-reflex">Reflex</a>
+      <a class="reco-chip" href="#t-sieb">Siebdruck</a>
     </div>
 
     <div class="tech-grid">
@@ -478,6 +477,7 @@ footer a:hover{color:#fff}
           <h3>Bestickung</h3>
         </div>
         <div class="tech-body">
+          <div class="usecase">Industriewäsche &amp; Dauerbelastung</div>
           <p>Ihr Logo wird direkt ins Gewebe gestickt. Wirkt hochwertig und hält jahrelang – auch bei häufiger Industriewäsche. Ideal für Polos, Hemden, Jacken und Softshell.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>Polos, Jacken, Softshell, Caps</dd>
@@ -496,6 +496,7 @@ footer a:hover{color:#fff}
           <h3>Digitaldruck (DTF)</h3>
         </div>
         <div class="tech-body">
+          <div class="usecase">Mehrfarbig &amp; Farbverläufe</div>
           <p>Beim DTF-Druck (Direct-to-Film) wird das Motiv auf eine Transferfolie gedruckt und mit Wärme und Druck auf das Textil übertragen – kein Direktdruck ins Gewebe. Mehrfarbig und detailreich, sehr haltbar und dabei kostengünstig, auch bei kleinen Auflagen.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>T-Shirts, Polos, Sweats, Softshell</dd>
@@ -514,6 +515,7 @@ footer a:hover{color:#fff}
           <h3>Flock</h3>
         </div>
         <div class="tech-body">
+          <div class="usecase">Auffällig &amp; samtig-erhaben</div>
           <p>Flock ist eine Textilfolie mit samtweicher, leicht erhabener Oberfläche. Sie wird mit einer Hitzepresse aufgebracht und sorgt für ein edles, auffälliges und langlebiges Logo.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>Shirts, Sweats, Jacken</dd>
@@ -532,6 +534,7 @@ footer a:hover{color:#fff}
           <h3>Reflex</h3>
         </div>
         <div class="tech-body">
+          <div class="usecase">Sichtbarkeit &amp; Warnschutz</div>
           <p>Reflektierende Applikation für mehr Sichtbarkeit bei Dämmerung und Dunkelheit. Bringt Ihr Logo auf Warn- und Sicherheitskleidung zur Geltung – und erhöht zugleich die Erkennbarkeit.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>Warn- &amp; Sicherheitskleidung</dd>
@@ -551,6 +554,7 @@ footer a:hover{color:#fff}
           <span class="partner">Partner-Verfahren</span>
         </div>
         <div class="tech-body">
+          <div class="usecase">Hohe Auflagen · Partner-Verfahren</div>
           <p>Klassischer Textildruck, bei dem Farbe durch ein Sieb auf das Textil gebracht wird – besonders wirtschaftlich bei hohen Auflagen und sehr strapazierfähig. Diesen Schritt übernimmt ein spezialisierter Partnerbetrieb; wir koordinieren die Abwicklung und optimieren dabei die Lieferzeiten für Sie.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>Hohe Auflagen, ein- bis mehrfarbige Logos</dd>
