@@ -242,15 +242,22 @@ dl.spec dd.tbd{color:#a06a1f}
 
 /* Process */
 .proc{background:var(--dark-bg);color:#fff}
-.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px;counter-reset:step}
-.step{background:var(--navy);border:1px solid var(--navy-2);border-radius:var(--r);padding:22px 18px;position:relative}
-.step .n{font-family:var(--head);font-size:15px;color:var(--navy);background:var(--orange);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.step h3{font-size:16px;margin-bottom:8px}
-.step p{font-size:13.5px;color:#a9b8c8}
-.step.hl{border-color:var(--orange)}
-.step.hl .n{background:#fff}
-@media(max-width:900px){.proc-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.proc-grid{grid-template-columns:1fr}}
+.proc .center{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.proc-pin{position:relative}
+.proc-sticky{position:sticky;top:0;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.proc-track{display:flex;gap:28px;padding:40px max(6vw,24px);will-change:transform}
+.pstep{flex:0 0 clamp(300px,32vw,400px);background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:20px;padding:38px 34px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.pstep .top{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.pstep .ic{width:54px;height:54px;border-radius:14px;background:rgba(255,102,0,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pstep .ic svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pstep .num{font-family:var(--head);font-size:12px;letter-spacing:1.2px;color:#8fa3b8;text-transform:uppercase}
+.pstep h3{font-size:22px;margin-bottom:12px}
+.pstep p{font-size:15px;color:#b7c4d3;line-height:1.6}
+@media(max-width:820px){
+  .proc-sticky{position:static;min-height:0;display:block;overflow:visible}
+  .proc-track{flex-direction:column;gap:0;padding:28px var(--pad) 0;transform:none!important}
+  .pstep{flex:none;position:sticky;top:84px;margin-bottom:20px}
+}
 
 /* FAQ */
 .faq-list{max-width:820px;margin:34px auto 0}
@@ -264,6 +271,7 @@ dl.spec dd.tbd{color:#a06a1f}
 /* CTA / form */
 .cta{background:radial-gradient(900px 400px at 20% 0%,#16294a,var(--navy) 60%,var(--dark-bg));color:#fff}
 .cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:820px){.cta-wrap{grid-template-columns:1fr;gap:28px}}
 .cta h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
 .cta h2 em{color:var(--orange);font-style:normal}
 .cta p{color:#c3d0de;margin-bottom:20px}
@@ -485,10 +493,10 @@ footer a:hover{color:#fff}
       <article class="tech" id="t-druck">
         <img class="tech-illu" src="assets/img/veredelung/technik/digitaldruck-transfer-arbeitskleidung-logo.webp" alt="Digitaldruck: mehrfarbiges Firmenlogo per Transfer auf Arbeitskleidung" loading="lazy">
         <div class="tech-head">
-          <h3>Digitaldruck</h3>
+          <h3>Digitaldruck (DTF)</h3>
         </div>
         <div class="tech-body">
-          <p>Das Motiv wird per Transfer mit Wärme und Druck auf das Textil gebracht. Bildet mehrfarbige, fotorealistische Logos und Farbverläufe präzise ab – auch kleine Auflagen sind wirtschaftlich.</p>
+          <p>Beim DTF-Druck (Direct-to-Film) wird das Motiv auf eine Transferfolie gedruckt und mit Wärme und Druck auf das Textil übertragen – kein Direktdruck ins Gewebe. Mehrfarbig und detailreich, sehr haltbar und dabei kostengünstig, auch bei kleinen Auflagen.</p>
           <dl class="spec">
             <dt>Geeignet für</dt><dd>T-Shirts, Polos, Sweats, Softshell</dd>
             <dt>Optik/Haptik</dt><dd>Flach, farbintensiv, detailreich</dd>
@@ -616,18 +624,20 @@ footer a:hover{color:#fff}
 
 <!-- ============ PROZESS ============ -->
 <section class="section proc">
-  <div class="container">
-    <div class="center">
-      <span class="eyebrow">So läuft es ab</span>
-      <h2 class="h2" style="color:#fff">In fünf Schritten vom Logo zur fertigen Kollektion</h2>
-      <p class="lead" style="color:#a9b8c8">Und danach: nachbestellen in wenigen Klicks – ohne alles neu zu klären.</p>
-    </div>
-    <div class="proc-grid">
-      <div class="step"><div class="n">1</div><h3>Beratung &amp; Technikwahl</h3><p>Wir klären Einsatz, Material und Motiv – und empfehlen das passende Verfahren.</p></div>
-      <div class="step"><div class="n">2</div><h3>Logo-Digitalisierung</h3><p>Ihr Logo wird produktionsfertig aufbereitet, Farben und Position festgelegt.</p></div>
-      <div class="step hl"><div class="n">3</div><h3>Muster &amp; Freigabe</h3><p>Sie sehen Ihr Logo, bevor produziert wird. Produktion erst nach Ihrer schriftlichen Freigabe – keine Fehlcharge.</p></div>
-      <div class="step"><div class="n">4</div><h3>Produktion</h3><p>Sorgfältige Veredelung Ihrer Ware nach den freigegebenen Vorgaben.</p></div>
-      <div class="step hl"><div class="n">5</div><h3>Im System hinterlegt</h3><p>Logo, Technik &amp; Platzierung bleiben gespeichert – Nachbestellung jederzeit einheitlich.</p></div>
+  <div class="center">
+    <span class="eyebrow">So läuft es ab</span>
+    <h2 class="h2" style="color:#fff">In fünf Schritten vom Logo zur fertigen Kollektion</h2>
+    <p class="lead" style="color:#a9b8c8">Und danach: nachbestellen in wenigen Klicks – ohne alles neu zu klären.</p>
+  </div>
+  <div class="proc-pin" id="procPin">
+    <div class="proc-sticky">
+      <div class="proc-track" id="procTrack">
+        <div class="pstep"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span class="num">Schritt 1</span></div><h3>Beratung &amp; Technikwahl</h3><p>Wir klären Einsatz, Material und Motiv – und empfehlen das passende Verfahren.</p></div>
+        <div class="pstep"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="num">Schritt 2</span></div><h3>Logo-Digitalisierung</h3><p>Ihr Logo wird produktionsfertig aufbereitet, Farben und Position festgelegt.</p></div>
+        <div class="pstep"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4.5"/></svg></div><span class="num">Schritt 3</span></div><h3>Muster &amp; Freigabe</h3><p>Sie sehen Ihr Logo, bevor produziert wird. Produktion erst nach Ihrer schriftlichen Freigabe – keine Fehlcharge.</p></div>
+        <div class="pstep"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H2a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V2a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H22a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><span class="num">Schritt 4</span></div><h3>Produktion</h3><p>Sorgfältige Veredelung Ihrer Ware nach den freigegebenen Vorgaben.</p></div>
+        <div class="pstep"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/></svg></div><span class="num">Schritt 5</span></div><h3>Im System hinterlegt</h3><p>Logo, Technik &amp; Platzierung bleiben gespeichert – Nachbestellung jederzeit einheitlich.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -706,6 +716,27 @@ document.querySelectorAll('.faq-q').forEach(function(b){
 });
 // Mobile burger -> jump to contact (Prototyp)
 document.querySelector('.burger').addEventListener('click',function(){location.hash='#kontakt';});
+
+// Prozess: Desktop horizontaler Pin-Scroll (Mobile = CSS-Stapel)
+(function(){
+  var pin=document.getElementById('procPin'), track=document.getElementById('procTrack');
+  if(!pin||!track) return;
+  var mq=window.matchMedia('(min-width:821px)');
+  function extent(){return Math.max(0, track.scrollWidth - window.innerWidth);}
+  function layout(){
+    if(mq.matches){ pin.style.height=(window.innerHeight+extent())+'px'; }
+    else { pin.style.height=''; track.style.transform=''; }
+  }
+  function onScroll(){
+    if(!mq.matches) return;
+    var span=pin.offsetHeight-window.innerHeight;
+    var prog=Math.min(1,Math.max(0,-pin.getBoundingClientRect().top/(span||1)));
+    track.style.transform='translate3d('+(-prog*extent())+'px,0,0)';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){layout();onScroll();});
+  layout(); onScroll();
+})();
 </script>
 </body>
 </html>
