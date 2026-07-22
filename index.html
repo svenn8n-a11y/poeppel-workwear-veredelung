@@ -168,14 +168,12 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdr
 .proof{background:#fff}
 .proof-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center;margin-top:8px}
 .proof-chip{background:var(--pastel);border-radius:10px;padding:14px 20px;color:var(--navy);font-family:var(--head);font-size:15px}
-.qmark{font-family:var(--head);font-size:66px;line-height:.4;color:var(--orange);margin:10px 0 4px}
-.quote{max-width:860px;margin:0 auto;font-size:clamp(19px,2.1vw,26px);line-height:1.55;color:var(--navy)}
-.quote-author{display:inline-flex;align-items:center;gap:22px;margin-top:34px;flex-wrap:wrap;justify-content:center;text-align:left}
-.quote-author .qa-logo{height:50px;width:auto}
-.quote-author .qa-sep{width:1px;height:46px;background:var(--line)}
+.qmark{font-family:var(--head);font-size:48px;line-height:.4;color:var(--orange);margin:6px 0 2px}
+.quote{max-width:760px;margin:0 auto;font-size:clamp(16px,1.7vw,21px);line-height:1.45;color:var(--navy)}
+.quote-author{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:26px;text-align:center}
+.quote-author .qa-logo{height:46px;width:auto}
 .quote-author .qa-name{font-family:var(--head);font-size:17px;color:var(--navy);display:block}
 .quote-author .qa-role{font-size:14px;color:var(--muted)}
-@media(max-width:560px){.quote-author .qa-sep{display:none}}
 
 /* Recommendation cards */
 .reco-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
@@ -241,13 +239,15 @@ dl.spec dd.tbd{color:#a06a1f}
 
 /* Data / material */
 .data-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
-.data-card{background:var(--navy);color:#fff;border-radius:var(--r);padding:30px}
-.data-card h3{font-size:clamp(23px,2vw,29px);margin-bottom:24px}
+.data-card{background:var(--navy);color:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.data-card h3{font-size:clamp(23px,2vw,29px);line-height:1.12;margin-bottom:24px}
 .data-card ul{list-style:none;display:grid;gap:12px}
 .data-card li{display:flex;gap:12px;font-size:15px;color:#c3d0de}
 .data-card li svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px}
-.data-hi{background:var(--orange);color:#fff;border-radius:var(--r);padding:26px}
-.data-hi b{font-family:var(--head);font-size:clamp(23px,2vw,29px);display:block;margin-bottom:20px}
+.data-hi{background:var(--orange);color:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;font-size:15px;line-height:1.6}
+.data-hi b{font-family:var(--head);font-size:clamp(23px,2vw,29px);line-height:1.12;display:block;margin-bottom:24px}
+.data-hi-text{margin:0}
+.data-hi-btn{margin-top:auto;text-align:right;padding-top:18px}
 @media(max-width:800px){.data-wrap{grid-template-columns:1fr}}
 
 /* Process */
@@ -443,7 +443,7 @@ footer a:hover{color:#fff}
           <div class="spec-shirt">
             <svg viewBox="0 0 120 130" aria-hidden="true">
               <path class="grm2" d="M40,20 C48,28 72,28 80,20 L98,28 L112,44 L100,56 L88,46 L88,118 L32,118 L32,46 L20,56 L8,44 L22,28 Z"/>
-              <rect class="logobox" x="56" y="46" width="19" height="13" rx="1"/>
+              <rect class="logobox" x="39" y="43" width="19" height="13" rx="1"/>
             </svg>
             <div class="cap"><b>Brustlogo</b><span>links (Herzseite), ca. 8–10 cm</span></div>
           </div>
@@ -483,7 +483,6 @@ footer a:hover{color:#fff}
     <blockquote class="quote">Die Firma Pöppel begleitet uns seit über fünf Jahrzehnten als zuverlässiger Partner. Besonders der Bereich Arbeitskleidung bietet uns echten Mehrwert: Dank des modernen Shopsystems bestellen wir unkompliziert und zeitsparend – die Kleidung wird individuell für jeden Mitarbeitenden verpackt geliefert. Das reduziert unseren internen Aufwand erheblich. Auch die große Auswahl und die fairen Preise kommen bei unserem Team sehr gut an.</blockquote>
     <div class="quote-author">
       <img class="qa-logo" src="assets/img/laemmle-logo.svg" alt="Lämmle Holzverarbeitung GmbH" width="590" height="85">
-      <span class="qa-sep"></span>
       <div>
         <span class="qa-name">Marion Strasser</span>
         <span class="qa-role">Personalorganisation / Marketing · Lämmle Holzverarbeitung GmbH, Rot a. d. Rot</span>
@@ -649,7 +648,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="data-wrap">
       <div class="data-card">
-        <h3>Was wir von Ihnen brauchen</h3>
+        <h3>Was wir von Ihnen<br>brauchen</h3>
         <ul>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Vektordatei bevorzugt</strong> – AI, EPS, PDF oder SVG. Verlustfrei skalierbar für Stick- und Druckdaten.</span></li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gewünschte <strong>Platzierung</strong> und ungefähre Größe – legen wir gemeinsam fest.</span></li>
@@ -658,8 +657,8 @@ footer a:hover{color:#fff}
       </div>
       <div class="data-hi">
         <b>Keine Vektordatei?<br>Kein Problem.</b>
-        Schicken Sie uns, was Sie haben – wir digitalisieren Ihr Logo produktionsfertig. Sie prüfen das Ergebnis vor der Produktion.
-        <div style="margin-top:18px"><a href="#kontakt" class="btn" style="background:#fff;color:var(--orange)">Logo prüfen lassen</a></div>
+        <p class="data-hi-text">Schicken Sie uns, was Sie haben – wir digitalisieren Ihr Logo produktionsfertig. Sie prüfen das Ergebnis vor der Produktion.</p>
+        <div class="data-hi-btn"><a href="#kontakt" class="btn" style="background:#fff;color:var(--orange)">Logo prüfen lassen</a></div>
       </div>
     </div>
   </div>
@@ -725,10 +724,10 @@ footer a:hover{color:#fff}
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Logo hinterlegt für einheitliche Nachbestellungen</li>
         </ul>
         <div class="contact-person">
-          <img src="assets/img/team/semra-baran.webp" alt="Semra Baran, Teamlead Workwear Management" width="360" height="450" loading="lazy">
+          <img src="assets/img/team/semra-baran.webp" alt="Semra Baran, Kundenberatung Workwear" width="360" height="450" loading="lazy">
           <div>
             <div class="cp-name">Semra Baran</div>
-            <div class="cp-role">Teamlead Workwear Management</div>
+            <div class="cp-role">Kundenberatung Workwear</div>
             <a href="mailto:s.baran@poeppel-wkz.de">s.baran@poeppel-wkz.de</a>
             <a href="tel:+4983319559370">+49 8331 - 9559 - 370</a>
           </div>
